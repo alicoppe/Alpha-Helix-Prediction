@@ -1,9 +1,9 @@
 ***Alpha Helix Classification in Amino Acid Sequences Using Machine
 Learning***
 
-**[Theoretical Basis:]{.underline}**
+**Theoretical Basis:**{: .underline}
 
-*[One-Hot Encoding]{.underline}*
+**[One-Hot Encoding]{.underline}**
 
 To modify the amino acid sequence data for more efficient computation,
 one-hot encoding was used. This is a technique used to represent

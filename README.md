@@ -126,6 +126,8 @@ prediction. Since simpler models tend to be more generalizable, the
 simplest model with the highest accuracy was taken for predictions,
 which would be the amino acid window size of 11.
 
+<img width="291" alt="image" src="https://github.com/alicoppe/Alpha-Helix-Prediction/assets/96750083/dc0141a4-551b-4fd7-8f94-719b979ed4e5">
+
 One downside for prediction solely using Naïve Bayes, is that it assumes
 independence of predictions, hence each amino acid is being predicted in
 isolation using a specific window size, and not being considered as a

@@ -151,6 +151,8 @@ The results are summarized in *Figure 3*, where it can be observed that
 the model reaches a peak test set accuracy of about 76.7% at epoch 22,
 where the test and training accuracies begin to diverge.
 
+<img width="323" alt="image" src="https://github.com/alicoppe/Alpha-Helix-Prediction/assets/96750083/9a74a55d-c571-42d1-860d-0f3faea93ea0">
+
 To ensure the improved model accuracy was not due to data leaking from
 pretraining the data on a Naïve Bayes model and then using that to train
 the LSTM model, the model was also tested on a separated dataset. In

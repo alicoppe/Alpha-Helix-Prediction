@@ -1,9 +1,6 @@
-***Alpha Helix Classification in Amino Acid Sequences Using Machine
-Learning***
+# Alpha Helix Classification in Amino Acid Sequences Using Machine Learning
 
-**Theoretical Basis:**{: .underline}
-
-**[One-Hot Encoding]{.underline}**
+## Theoretical Basis:
 
 To modify the amino acid sequence data for more efficient computation,
 one-hot encoding was used. This is a technique used to represent
@@ -17,7 +14,7 @@ encoding is widely used in machine learning, as it prevents the model
 from misinterpreting ordinal relationships amongst categories, which
 works well for the given application.
 
-*[Naïve Bayes]{.underline}*
+*[Naïve Bayes]*
 
 Naïve Bayes is the first algorithm used in this project, which is a
 probabilistic algorithm based on Bayes' Theorem, which is represented as
@@ -45,7 +42,7 @@ probabilities:
 
 $$\log{P\left( A_{1},A_{2},\ldots A_{n} \middle| B \right)} = logP\left( A_{1} \middle| B \right) + logP\left( A_{2} \middle| B \right) + ..\  + logP(A_{n}|B)$$
 
-*[Long Short-Term Memory (LSTM) Recurrent Neural Networks]{.underline}*
+*[Long Short-Term Memory (LSTM) Recurrent Neural Networks]*
 
 Recurrent Neural Networks (RNNs) are neural networks which pertain to
 the analysis of sequential data. In these networks, individual vectors
@@ -89,7 +86,7 @@ Update, and Output Gate, there are trainable weights, which are the
 extracted model parameters necessary for creating a forward pass for
 prediction (Daniel & Austen, 2023).
 
-**[Code Explanation:]{.underline}**
+## Code Explanation:
 
 In the provided SSpred.py file, the parameters for the log likelihoods
 of the Naïve Bayes model, the weights and biases for the LSTM model, and
@@ -113,7 +110,7 @@ arrays in the list are converted to string format, and are outputted to
 a specified output file, along with their names and the string version
 of their sequence.
 
-**[Discussion:]{.underline}**
+## Discussion
 
 Firstly, a Naïve Bayes model was tested for a range of amino acid
 windows, these results are summarized in *Figure 2*. The window size
@@ -203,7 +200,7 @@ machine learning applications, and have shown excellent results, such as
 an 80.18% accuracy for multiclass secondary structure prediction using
 them as an input to a combined CNN and LSTM model (Cheng et al., 2020).
 
-**[References:]{.underline}**
+## References
 
 Cheng, J., Liu, Y., & Ma, Y. (2020). Protein secondary structure
 prediction based on integration of CNN and LSTM model. *Journal of

@@ -14,7 +14,7 @@ encoding is widely used in machine learning, as it prevents the model
 from misinterpreting ordinal relationships amongst categories, which
 works well for the given application.
 
-*[Naïve Bayes]*
+**Naïve Bayes**
 
 Naïve Bayes is the first algorithm used in this project, which is a
 probabilistic algorithm based on Bayes' Theorem, which is represented as
@@ -42,7 +42,7 @@ probabilities:
 
 $$\log{P\left( A_{1},A_{2},\ldots A_{n} \middle| B \right)} = logP\left( A_{1} \middle| B \right) + logP\left( A_{2} \middle| B \right) + ..\  + logP(A_{n}|B)$$
 
-*[Long Short-Term Memory (LSTM) Recurrent Neural Networks]*
+**Long Short-Term Memory (LSTM) Recurrent Neural Networks**
 
 Recurrent Neural Networks (RNNs) are neural networks which pertain to
 the analysis of sequential data. In these networks, individual vectors

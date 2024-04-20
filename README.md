@@ -80,6 +80,8 @@ network, which are showcased in the model in *Figure 1*:
 6.  *Hidden State Output*: The information that is outputted from the
     LSTM cell.
 
+<img width="468" alt="image" src="https://github.com/alicoppe/Alpha-Helix-Prediction/assets/96750083/7b61c1c0-2f20-49d8-b59b-4da06d62debe">
+
 This LSTM cell structure is repeated for every vector in the sequence.
 For each of the inputs of the Input Gate, Forget Gate, Cell State
 Update, and Output Gate, there are trainable weights, which are the

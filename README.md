@@ -3,7 +3,10 @@
 ## Introduction
 
 The goal of this project was to predict alpha helices from a given dataset 
-of amino acid sequence strings.
+of amino acid sequence strings. The model was initially trained in a Jupyter
+notebook, where the parameters were then exported and a custom prediction file
+was made for a forward pass. The model was then tested with the testing.py file,
+based on the labels file, and model outputs are displayed in the output file.
 
 ## Code Explanation:
 

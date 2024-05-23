@@ -1,3 +1,2 @@
 studentName: LICOPPE AIDAN
-studentID: 260913455
 programmingLanguage: PYTHON 3

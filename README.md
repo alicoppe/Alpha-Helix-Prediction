@@ -1,92 +1,9 @@
 # Alpha Helix Classification in Amino Acid Sequences Using Machine Learning
 
-## Theoretical Basis:
+## Introduction
 
-To modify the amino acid sequence data for more efficient computation,
-one-hot encoding was used. This is a technique used to represent
-categorical data, where each input is converted to an array of size N,
-where N is the total number of possible categories. For each of the
-categories, a binary vector is created, where every element in the array
-is set to 0 except for the index corresponding to the category, which is
-set to 1. This method assumes there is no ranking amongst categories,
-and each category is treated as independent from the other. One-hot
-encoding is widely used in machine learning, as it prevents the model
-from misinterpreting ordinal relationships amongst categories, which
-works well for the given application.
-
-**Naïve Bayes**
-
-Naïve Bayes is the first algorithm used in this project, which is a
-probabilistic algorithm based on Bayes' Theorem, which is represented as
-the probability of existing beliefs (A) given some observed evidence
-(B):
-
-$$P\left( A \middle| B \right) = \ \frac{P(B)P(B|A)}{P(A)}$$
-
-The denominator is often difficult to compute especially in complex
-models, hence we can focus or proportional relationships:
-
-$$P\left( A \middle| B \right) \propto P(B)P(B|A)$$
-
-Now for the task of classification, given a set of categorical inputs,
-we make the naïve assumption of conditional independence of inputs.
-Using this assumption, we can calculate given a certain class label, the
-likelihood of the certain set of input features as a product of
-conditional probabilities of each individual feature:
-
-$$P\left( A_{1},A_{2},\ldots A_{n} \middle| B \right) = P\left( A_{1} \middle| B \right) \bullet P\left( A_{2} \middle| B \right)\ldots \bullet P\left( A_{n} \middle| B \right)$$
-
-For larger sets of features, to prevent numerical underflow for small
-probability values, the product can be converted to the sum of log
-probabilities:
-
-$$\log{P\left( A_{1},A_{2},\ldots A_{n} \middle| B \right)} = logP\left( A_{1} \middle| B \right) + logP\left( A_{2} \middle| B \right) + ..\  + logP(A_{n}|B)$$
-
-**Long Short-Term Memory (LSTM) Recurrent Neural Networks**
-
-Recurrent Neural Networks (RNNs) are neural networks which pertain to
-the analysis of sequential data. In these networks, individual vectors
-are sequentially run through the network, and the output for each input
-of the sequence is used as a hidden state which is used as part of the
-input for the following input in the sequence. With this architecture,
-this allows for elements of a sequence to have context provided from
-previous elements to allow for more accurate predictions. These networks
-suffer from the vanishing gradient problem though, in which the
-computation of a gradient with respect to an output can get extremely
-small for long sequences.
-
-This problem is fixed by the Long Short-Term Memory network architecture
-for RNNs, which introduces a memory cell, and a set of gates allowing it
-to retain or discard information from previous layers. Due to this
-complex architecture, LSTMs can better capture long-term dependencies in
-sequential data. These are the following main components of an LSTM
-network, which are showcased in the model in *Figure 1*:
-
-1.  *Input gate (i):* Determines the information to be added to the cell
-    state.
-
-2.  *Forget gate (f):* Determines what information from the previous
-    cell state to be discarded.
-
-3.  *Cell State Update (g)*: The new information that is to be added to
-    the cell state.
-
-4.  *Cell State (c~t~):* Combination of the forget gate, input gate, and
-    cell input.
-
-5.  *Output Gate (o)*: Determines what part of the cell state to be
-    added to the next hidden state.
-
-6.  *Hidden State Output*: The information that is outputted from the
-    LSTM cell.
-
-<img width="468" alt="image" src="https://github.com/alicoppe/Alpha-Helix-Prediction/assets/96750083/7b61c1c0-2f20-49d8-b59b-4da06d62debe">
-
-This LSTM cell structure is repeated for every vector in the sequence.
-For each of the inputs of the Input Gate, Forget Gate, Cell State
-Update, and Output Gate, there are trainable weights, which are the
-extracted model parameters necessary for creating a forward pass for
-prediction (Daniel & Austen, 2023).
+The goal of this project was to predict alpha helices from a given dataset 
+of amino acid sequence strings.
 
 ## Code Explanation:
 
